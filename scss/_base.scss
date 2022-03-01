@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+// color
+$primary-color: #ee4d2d;
+$error-color: #fb5533;
+$white-color: #fff;
+$black-color: #000;
+$text-color: #333;
+$border-gray-color: #d3d3d3;
+
+// font weight
+$font-light: 300;
+$font-normal: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+
+// font size
+$text-xs: 0.75rem;
+$text-sm: 0.813rem;
+$text-base: 0.875rem;
+$text-lg: 1.125rem;
+$text-xl: 1.25rem;
+$text-2xl: 1.5rem;
+$text-3xl: 1.875rem;
+$text-4xl: 2.25rem;
+
+// other
+$header-height: 7.5rem;
+$navbar-height: 2.125rem;
+
+@mixin box-shadow-xs {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+@mixin box-shadow-sm {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  line-height: 1rem;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  color: $text-color;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+.grid {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  &--full {
+    width: 100%;
+  }
+
+  &--row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.text-primary {
+  color: $primary-color !important;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  text-decoration: none;
+  background-color: transparent;
+  min-width: 90px;
+  padding: 0.75rem 1rem;
+  border-radius: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: $text-base;
+  font-weight: $font-normal;
+  display: inline-block;
+
+  &--width-lg {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  &--transparent:hover {
+    background-color: #f9f9f9;
+  }
+
+  &--primary {
+    color: $white-color;
+    background-color: $primary-color;
+
+    &:hover {
+      background-color: #fb6445;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes growth {
+  from {
+    opacity: 0;
+    transform: scale(var(--grow-from));
+  }
+  to {
+    opacity: 1;
+    transform: scale(var(--grow-to));
+  }
+}
