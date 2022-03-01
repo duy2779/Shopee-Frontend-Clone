@@ -37,7 +37,7 @@
     }
 
     &:hover .tooltip {
-      display: initial;
+      display: block;
     }
 
     &:hover .notify {
@@ -49,6 +49,65 @@
       opacity: 1;
       transform: scale(1);
     }
+  }
+
+  &__user {
+    &:hover .user__tooltip {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .user__tooltip {
+      font-size: $text-base;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: $white-color;
+      width: 192px;
+      opacity: 0;
+      transform: scale(0);
+      border-radius: 2px;
+      transition: all ease 0.2s;
+      will-change: transform, opacity;
+      z-index: 1;
+      @include box-shadow-xs;
+
+      &::before {
+        content: "";
+        position: absolute;
+        border-left: 26px solid transparent;
+        border-right: 26px solid transparent;
+        border-bottom: 20px solid $white-color;
+        top: -10px;
+        right: 22px;
+      }
+
+      p {
+        padding: 0.75rem;
+
+        &:hover {
+          cursor: pointer;
+          color: $green-color;
+          background-color: #f9f9f9;
+        }
+
+        &:first-child {
+          border-top-left-radius: 2px;
+          border-top-right-radius: 2px;
+        }
+        &:last-child {
+          border-bottom-left-radius: 2px;
+          border-bottom-right-radius: 2px;
+          border-top: 1px solid $border-gray-color;
+        }
+      }
+    }
+  }
+
+  &__user-avatar {
+    width: 25px;
+    border-radius: 50%;
+    margin: 0 6px;
   }
 
   &__link {
@@ -536,8 +595,8 @@
       border-radius: 2px;
       @include box-shadow-sm;
       transform-origin: 95% top;
-      // opacity: 0;
-      // transform: scale(0);
+      opacity: 0;
+      transform: scale(0);
       transition: all ease 0.2s;
 
       &.header__cart-list--empty {

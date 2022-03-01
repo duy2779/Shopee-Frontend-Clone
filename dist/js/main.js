@@ -17,15 +17,20 @@ function removeModalActive() {
     }
 }
 
-loginBtn.onclick = function () {
-    modal.classList.add('open')
-    loginModal.classList.add('active')
+if (loginBtn && registerBtn) {
+
+    loginBtn.onclick = function () {
+        modal.classList.add('open')
+        loginModal.classList.add('active')
+    }
+
+    registerBtn.onclick = function () {
+        modal.classList.add('open')
+        registerModal.classList.add('active')
+    }
 }
 
-registerBtn.onclick = function () {
-    modal.classList.add('open')
-    registerModal.classList.add('active')
-}
+
 
 modalOverlay.onclick = function () {
     modal.classList.remove('open')
