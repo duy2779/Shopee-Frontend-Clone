@@ -327,7 +327,81 @@
         </div>
       </header>
       <!-- App container -->
-      <div class="container"></div>
+      <div class="app__container">
+        <div class="grid">
+          <div class="grid__row">
+            <div class="grid__col-2">
+              <div class="sidebar-category">
+                <h3 class="sidebar-category__heading">
+                  <i class="sidebar-category__icon fa-solid fa-list"></i>
+                  Danh mục
+                </h3>
+                <ul class="sidebar-category__list">
+                  <li class="sidebar-category__item active">
+                    <a href="#" class="sidebar-category__link">Giày Nam</a>
+                  </li>
+                  <li class="sidebar-category__item">
+                    <a href="#" class="sidebar-category__link">Giày Nữ</a>
+                  </li>
+                  <li class="sidebar-category__item">
+                    <a href="#" class="sidebar-category__link">Giày Chạy Bộ</a>
+                  </li>
+                  <li class="sidebar-category__item">
+                    <a href="#" class="sidebar-category__link">Giày Đá Bóng</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="grid__col-10">
+              <div class="home-filter">
+                <span class="home-filter__label">Sắp xếp theo</span>
+                <button class="home-filter__btn btn btn--primary">
+                  Phổ biến
+                </button>
+                <button class="home-filter__btn btn btn--white">
+                  Mới nhất
+                </button>
+                <button class="home-filter__btn btn btn--white">
+                  Bán chạy
+                </button>
+                <button class="home-filter__price-select">
+                  Giá
+                  <i class="fa-solid fa-angle-down"></i>
+                  <div class="home-filter__price-option">
+                    <p class="home-filter__price-option__item">
+                      Giá: Thấp đến cao
+                    </p>
+                    <p class="home-filter__price-option__item">
+                      Giá: Cao đến thấp
+                    </p>
+                  </div>
+                </button>
+
+                <div class="page-controller">
+                  <span class="page-controller__num">
+                    <span class="page-controller__current-page text-primary">
+                      1
+                    </span>
+                    /100
+                  </span>
+                  <div class="page-controller__btns">
+                    <a
+                      href="#"
+                      class="page-controller__btn btn btn--white btn--disabled"
+                    >
+                      <i class="btn__icon fa-solid fa-angle-left"></i>
+                    </a>
+                    <a href="#" class="page-controller__btn btn btn--white">
+                      <i class="btn__icon fa-solid fa-angle-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
       <footer class="footer"></footer>
       <!-- Modal -->
       <div id="modal" class="modal">
@@ -380,9 +454,9 @@
               <!--Form control -->
               <div class="auth-form__form-control">
                 <button class="btn btn--width-lg btn--transparent">
-                  Trở về
+                  TRỞ VỀ
                 </button>
-                <button class="btn btn--width-lg btn--primary">Đăng ký</button>
+                <button class="btn btn--width-lg btn--primary">ĐĂNG KÝ</button>
               </div>
             </div>
             <!-- Social -->
@@ -456,10 +530,10 @@
               <!--Form control -->
               <div class="auth-form__form-control">
                 <button class="btn btn--width-lg btn--transparent">
-                  Trở về
+                  TRỞ VỀ
                 </button>
                 <button class="btn btn--width-lg btn--primary">
-                  Đăng Nhập
+                  ĐĂNG NHẬP
                 </button>
               </div>
             </div>

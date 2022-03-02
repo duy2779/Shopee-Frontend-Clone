@@ -68,9 +68,23 @@ img {
     width: 100%;
   }
 
-  &--row {
+  &__row {
     display: flex;
     flex-wrap: wrap;
+    margin: 0 -12px;
+  }
+
+  &__col-2,
+  &__col-10 {
+    padding: 0 12px;
+  }
+
+  &__col-2 {
+    width: 16.667%;
+  }
+
+  &__col-10 {
+    width: 83.334%;
   }
 }
 
@@ -78,23 +92,24 @@ img {
   color: $primary-color !important;
 }
 
+.tooltip {
+  z-index: 2;
+}
+
 .btn {
   border: none;
   outline: none;
   text-decoration: none;
   background-color: transparent;
-  min-width: 90px;
-  padding: 0.75rem 1rem;
+  padding: 9px 18px;
   border-radius: 2px;
   cursor: pointer;
-  text-transform: uppercase;
   font-size: $text-base;
   font-weight: $font-normal;
   display: inline-block;
 
   &--width-lg {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding: 0.75rem 2.5rem;
   }
 
   &--transparent:hover {
@@ -108,6 +123,15 @@ img {
     &:hover {
       background-color: #fb6445;
     }
+  }
+
+  &--white {
+    background-color: $white-color;
+  }
+
+  &--disabled {
+    opacity: 0.7;
+    cursor: default;
   }
 }
 
