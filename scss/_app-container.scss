@@ -1,10 +1,7 @@
 .app__container {
   background-color: #f5f5f5;
-  padding: 2rem 0;
-}
-
-.home-right-side {
-  padding-left: 8px;
+  padding-top: 2rem;
+  border-bottom: 5px solid $primary-color;
 }
 
 .sidebar-category {
@@ -51,6 +48,61 @@
     }
   }
 }
+
+// Mobile category
+.mobile-category {
+  display: none;
+  padding-top: 10px;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    max-width: 100%;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__item {
+    flex-shrink: 0;
+    margin-right: 10px;
+
+    &:nth-of-type(3n + 1) .mobile-category__link {
+      background-color: #87afd8;
+    }
+
+    &:nth-of-type(3n + 2) .mobile-category__link {
+      background-color: #76c9bd;
+    }
+
+    &:nth-of-type(3n + 3) .mobile-category__link {
+      background-color: #88cf81;
+    }
+  }
+
+  &__link {
+    $line-height: 1.3rem;
+    display: block;
+    padding: 0 2px;
+    text-decoration: none;
+    color: $white-color;
+    width: 110px;
+    height: 40px;
+    font-size: $text-base;
+    text-align: center;
+    border-radius: 3px;
+    line-height: 1.3rem;
+    height: $line-height * 2;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+}
+
+// Home filter
 
 .home-filter {
   display: flex;
@@ -111,6 +163,46 @@
   }
 }
 
+// Sort bar mobile
+.sort-bar-mobile {
+  position: fixed;
+  top: $header-height - $navbar-height;
+  right: 0;
+  left: 0;
+  background-color: $white-color;
+  display: flex;
+  height: 38px;
+  z-index: 1;
+  @include box-shadow-sm;
+
+  &__item {
+    position: relative;
+    flex: 1;
+    text-align: center;
+    line-height: 38px;
+    font-size: $text-base;
+
+    &:first-child::before {
+      display: none;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 60%;
+      background-color: $border-gray-color;
+    }
+
+    &.active {
+      color: $primary-color;
+    }
+  }
+}
+
 .page-controller {
   margin-left: auto;
   display: flex;
@@ -127,11 +219,6 @@
   }
 }
 
-.home-products {
-  margin-left: 10px;
-  margin-right: 5px;
-}
-
 // Product
 
 .product {
@@ -141,7 +228,7 @@
   color: $text-color;
   background-color: $white-color;
   border-radius: 2px;
-  margin: 14px -5px 0 -5px;
+  margin-top: 14px;
   transition: transform ease-in 0.1s;
   will-change: transform;
   @include box-shadow-xs;
@@ -274,4 +361,8 @@
   &__sale-label {
     color: $white-color;
   }
+}
+
+.home__pagination {
+  margin: 44px 0;
 }

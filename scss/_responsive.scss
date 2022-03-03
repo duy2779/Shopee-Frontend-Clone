@@ -1,0 +1,138 @@
+// pc
+@media screen and (min-width: 1024px) {
+  .hide-on-pc {
+    display: none;
+  }
+}
+// Tablet & mobile
+@media screen and (max-width: 1023px) {
+  .hide-on-tablet-mobile {
+    display: none;
+  }
+
+  .header {
+    height: $header-height -$navbar-height;
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  .header__with-search {
+    justify-content: space-between;
+  }
+
+  .header__logo {
+    width: auto;
+  }
+
+  .header__search {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: $header-height - $navbar-height;
+    right: 0;
+    left: 0;
+    transform: translateY(-10px);
+    transition: all linear 0.2s;
+  }
+
+  .search-checkbox-mobile:checked ~ .header__search {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .app__container {
+    padding-top: ($header-height - $navbar-height) + $sortbar-mobile-height;
+  }
+
+  .mobile-category {
+    display: block;
+  }
+
+  .header {
+    &__cart {
+      padding: 0 0.5rem;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &__cart-list {
+      position: fixed;
+      top: $header-height - $navbar-height;
+      right: 0;
+      left: 0;
+      transform-origin: 90% top;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &__cart-item {
+      width: auto;
+    }
+  }
+
+  .footer {
+    text-align: center;
+
+    &__link {
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+// Tablet
+@media screen and (min-width: 740px) and (max-width: 1023px) {
+  .hide-on-tablet {
+    display: none;
+  }
+
+  &__cart-item,
+  &__cart-list-items__heading,
+  &__cart-list-control {
+    padding-left: calc((100% - 644px) / 2);
+    padding-right: calc((100% - 644px) / 2);
+  }
+}
+
+// Mobile
+@media screen and (max-width: 739px) {
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .home-products {
+    padding: 0 10px;
+  }
+
+  .mobile-category {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .pagination__link {
+    font-size: $text-lg;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
+  .pagination__icon {
+    font-size: $text-lg;
+  }
+
+  .footer__row {
+    padding: 0 10px;
+  }
+
+  &__cart-item,
+  &__cart-list-items__heading,
+  &__cart-list-control {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

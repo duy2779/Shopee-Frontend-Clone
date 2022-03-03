@@ -3,7 +3,7 @@
   height: $header-height;
 }
 
-.header .navbar {
+.navbar {
   display: flex;
   justify-content: space-between;
   height: $navbar-height;
@@ -470,6 +470,11 @@
     padding: 0 0.6rem;
   }
 
+  &__search-icon-mobile {
+    color: $white-color;
+    font-size: $text-xl;
+  }
+
   &__logo {
     width: 200px;
 
@@ -572,12 +577,16 @@
       transform: scale(1);
     }
 
+    &-icon-wrapper {
+      position: relative;
+    }
+
     &-total-quantity {
       color: $primary-color;
       padding: 1px 7px;
       position: absolute;
-      top: -8px;
-      right: 3px;
+      top: -10px;
+      right: -10px;
       font-size: $text-sm;
       line-height: 0.815rem;
       background-color: $white-color;
@@ -588,7 +597,7 @@
     &-list {
       position: absolute;
       top: 35px;
-      right: 8px;
+      right: -8px;
       background-color: $white-color;
       border-radius: 2px;
       @include box-shadow-sm;

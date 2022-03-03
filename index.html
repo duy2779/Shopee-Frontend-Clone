@@ -15,9 +15,9 @@
     <div class="app">
       <!-- Header -->
       <header class="header">
-        <div class="grid">
+        <div class="grid wide">
           <!-- Navbar -->
-          <nav class="navbar">
+          <nav class="navbar hide-on-tablet-mobile">
             <!-- Navbar left -->
             <ul class="navbar__list">
               <li class="navbar__item navbar__item--separate-right">
@@ -184,7 +184,7 @@
                 </div>
               </li>
               <!-- User not logged in -->
-              <li
+              <!-- <li
                 class="navbar__item navbar__item--separate-right js-btn-login"
               >
                 <a href="#" class="navbar__link navbar__link--bold">
@@ -195,7 +195,7 @@
                 <a href="#" class="navbar__link navbar__link--bold">
                   Đăng kí
                 </a>
-              </li>
+              </li> -->
               <!-- User logged -->
               <li class="navbar__item navbar__user">
                 <a href="#" class="navbar__link">
@@ -217,6 +217,13 @@
           </nav>
           <!-- Header with search -->
           <div class="header__with-search">
+            <!-- search icon for mobile -->
+            <label
+              for="search-checkbox-mobile"
+              class="header__search-icon-mobile hide-on-pc"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </label>
             <!-- Header Logo -->
             <div class="header__logo">
               <a href="/" class="header__logo-link">
@@ -231,6 +238,12 @@
               </a>
             </div>
             <!-- Header search -->
+            <input
+              type="checkbox"
+              class="search-checkbox-mobile"
+              id="search-checkbox-mobile"
+              hidden
+            />
             <div class="header__search">
               <div class="header__search-input-wrapper">
                 <input
@@ -259,68 +272,70 @@
             </div>
             <!-- Header cart -->
             <div class="header__cart">
-              <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
-              <!-- cart badge quantity -->
-              <span class="header__cart-total-quantity">3</span>
-              <!-- Cart tooltip -->
-              <div class="tooltip header__cart-list">
-                <!-- Cart empty -->
-                <img
-                  src="./dist/images/empty-cart.png"
-                  alt="cart-empty"
-                  class="header__cart-list--empty-img"
-                />
-                <p class="header__cart-list--empty-text">Chưa có sản phẩm</p>
-                <!-- Cart has items -->
-                <div class="header__cart-has-items">
-                  <h4 class="header__cart-list-items__heading">
-                    Sản phẩm vừa mới thêm
-                  </h4>
-                  <ul class="header__cart-list-items">
-                    <!-- Cart Item -->
-                    <li class="header__cart-item">
-                      <img
-                        src="./dist/images/products/item-1.jpg"
-                        alt="item-1"
-                        class="header__cart-item__img"
-                      />
-                      <span class="header__cart-item__name">
-                        Giày thể thao nữ chất vải dáng basic
-                      </span>
-                      <span class="header__cart-item__price text-primary">
-                        100.000đ
-                      </span>
-                    </li>
-                    <li class="header__cart-item">
-                      <img
-                        src="./dist/images/products/item-2.jpg"
-                        alt="item-2"
-                        class="header__cart-item__img"
-                      />
-                      <span class="header__cart-item__name">
-                        Giày nam đẹp mới về siêu chất lượng
-                      </span>
-                      <span class="header__cart-item__price text-primary">
-                        199.000đ
-                      </span>
-                    </li>
-                    <li class="header__cart-item">
-                      <img
-                        src="./dist/images/products/item-3.jpg"
-                        alt="item-3"
-                        class="header__cart-item__img"
-                      />
-                      <span class="header__cart-item__name">
-                        Giày Nam 2021 Mới Về, Giày Sneaker Nam Phong Cách Cực
-                        Ngầu Thời Trang Trẻ Trung
-                      </span>
-                      <span class="header__cart-item__price text-primary">
-                        200.000đ
-                      </span>
-                    </li>
-                  </ul>
-                  <div class="header__cart-list-control">
-                    <a href="#" class="btn btn--primary">Xem giỏ hàng</a>
+              <div class="header__cart-icon-wrapper">
+                <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
+                <!-- cart badge quantity -->
+                <span class="header__cart-total-quantity">3</span>
+                <!-- Cart tooltip -->
+                <div class="tooltip header__cart-list">
+                  <!-- Cart empty -->
+                  <img
+                    src="./dist/images/empty-cart.png"
+                    alt="cart-empty"
+                    class="header__cart-list--empty-img"
+                  />
+                  <p class="header__cart-list--empty-text">Chưa có sản phẩm</p>
+                  <!-- Cart has items -->
+                  <div class="header__cart-has-items">
+                    <h4 class="header__cart-list-items__heading">
+                      Sản phẩm vừa mới thêm
+                    </h4>
+                    <ul class="header__cart-list-items">
+                      <!-- Cart Item -->
+                      <li class="header__cart-item">
+                        <img
+                          src="./dist/images/products/item-1.jpg"
+                          alt="item-1"
+                          class="header__cart-item__img"
+                        />
+                        <span class="header__cart-item__name">
+                          Giày thể thao nữ chất vải dáng basic
+                        </span>
+                        <span class="header__cart-item__price text-primary">
+                          100.000đ
+                        </span>
+                      </li>
+                      <li class="header__cart-item">
+                        <img
+                          src="./dist/images/products/item-2.jpg"
+                          alt="item-2"
+                          class="header__cart-item__img"
+                        />
+                        <span class="header__cart-item__name">
+                          Giày nam đẹp mới về siêu chất lượng
+                        </span>
+                        <span class="header__cart-item__price text-primary">
+                          199.000đ
+                        </span>
+                      </li>
+                      <li class="header__cart-item">
+                        <img
+                          src="./dist/images/products/item-3.jpg"
+                          alt="item-3"
+                          class="header__cart-item__img"
+                        />
+                        <span class="header__cart-item__name">
+                          Giày Nam 2021 Mới Về, Giày Sneaker Nam Phong Cách Cực
+                          Ngầu Thời Trang Trẻ Trung
+                        </span>
+                        <span class="header__cart-item__price text-primary">
+                          200.000đ
+                        </span>
+                      </li>
+                    </ul>
+                    <div class="header__cart-list-control">
+                      <a href="#" class="btn btn--primary">Xem giỏ hàng</a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -330,9 +345,10 @@
       </header>
       <!-- App container -->
       <div class="app__container">
-        <div class="grid">
-          <div class="grid__row">
-            <div class="grid__col-2">
+        <div class="grid wide">
+          <!-- mobile category -->
+          <div class="row">
+            <div class="col col-l-2 col-m-0 col-s-0">
               <div class="sidebar-category">
                 <h3 class="sidebar-category__heading">
                   <i class="sidebar-category__icon fa-solid fa-list"></i>
@@ -354,10 +370,10 @@
                 </ul>
               </div>
             </div>
-            <div class="grid__col-10">
+            <div class="col col-l-10 col-m-12 col-s-12">
               <!-- Home right side (Products show) -->
               <div class="home-right-side">
-                <div class="home-filter">
+                <div class="home-filter hide-on-tablet-mobile">
                   <span class="home-filter__label">Sắp xếp theo</span>
                   <button class="home-filter__btn btn btn--primary">
                     Phổ biến
@@ -401,11 +417,62 @@
                     </div>
                   </div>
                 </div>
+                <!-- Header sort bar mobile -->
+                <ul class="sort-bar-mobile hide-on-pc">
+                  <li class="sort-bar-mobile__item">Liên quan</li>
+                  <li class="sort-bar-mobile__item active">Mới</li>
+                  <li class="sort-bar-mobile__item">Bán chạy</li>
+                  <li class="sort-bar-mobile__item">Giá</li>
+                </ul>
                 <!-- Products -->
+                <nav class="mobile-category">
+                  <ul class="mobile-category__list">
+                    <li class="mobile-category__item">
+                      <a href="" class="mobile-category__link">
+                        Điện Tử Gia Dụng
+                      </a>
+                    </li>
+                    <li class="mobile-category__item">
+                      <a href="" class="mobile-category__link">
+                        Thể Thao & Du Lịch
+                      </a>
+                    </li>
+                    <li class="mobile-category__item">
+                      <a href="" class="mobile-category__link">
+                        Phụ Kiện & Trang Sức Nữ
+                      </a>
+                    </li>
+                    <li class="mobile-category__item">
+                      <a href="" class="mobile-category__link">
+                        Thiết bị gia dụng Bếp
+                      </a>
+                    </li>
+                    <li class="mobile-category__item">
+                      <a href="" class="mobile-category__link">
+                        Nhà cửa và đời sống
+                      </a>
+                    </li>
+                    <li class="mobile-category__item">
+                      <a href="" class="mobile-category__link">
+                        Giày chơi bóng rổ
+                      </a>
+                    </li>
+                    <li class="mobile-category__item">
+                      <a href="" class="mobile-category__link">
+                        Giày chơi bóng rổ
+                      </a>
+                    </li>
+                    <li class="mobile-category__item">
+                      <a href="" class="mobile-category__link">
+                        Giày chơi bóng rổ
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
                 <div class="home-products">
-                  <div class="grid__row">
+                  <div class="row">
                     <!-- product item-->
-                    <div class="grid__col-2-4">
+                    <div class="col col-l-2-4 col-m-4 col-s-6">
                       <a href="#" class="product">
                         <div
                           class="product__img"
@@ -457,7 +524,7 @@
                       </a>
                     </div>
                     <!-- product item-->
-                    <div class="grid__col-2-4">
+                    <div class="col col-l-2-4 col-m-4 col-s-6">
                       <a href="#" class="product">
                         <div
                           class="product__img"
@@ -509,7 +576,7 @@
                       </a>
                     </div>
                     <!-- product item-->
-                    <div class="grid__col-2-4">
+                    <div class="col col-l-2-4 col-m-4 col-s-6">
                       <a href="#" class="product">
                         <div
                           class="product__img"
@@ -562,7 +629,7 @@
                       </a>
                     </div>
                     <!-- product item-->
-                    <div class="grid__col-2-4">
+                    <div class="col col-l-2-4 col-m-4 col-s-6">
                       <a href="#" class="product">
                         <div
                           class="product__img"
@@ -614,7 +681,7 @@
                       </a>
                     </div>
                     <!-- product item-->
-                    <div class="grid__col-2-4">
+                    <div class="col col-l-2-4 col-m-4 col-s-6">
                       <a href="#" class="product">
                         <div
                           class="product__img"
@@ -666,7 +733,7 @@
                       </a>
                     </div>
                     <!-- product item-->
-                    <div class="grid__col-2-4">
+                    <div class="col col-l-2-4 col-m-4 col-s-6">
                       <a href="#" class="product">
                         <div
                           class="product__img"
@@ -718,7 +785,7 @@
                       </a>
                     </div>
                     <!-- product item-->
-                    <div class="grid__col-2-4">
+                    <div class="col col-l-2-4 col-m-4 col-s-6">
                       <a href="#" class="product">
                         <div
                           class="product__img"
@@ -770,7 +837,7 @@
                       </a>
                     </div>
                     <!-- product item-->
-                    <div class="grid__col-2-4">
+                    <div class="col col-l-2-4 col-m-4 col-s-6">
                       <a href="#" class="product">
                         <div
                           class="product__img"
@@ -821,7 +888,7 @@
                       </a>
                     </div>
                     <!-- product item-->
-                    <div class="grid__col-2-4">
+                    <div class="col col-l-2-4 col-m-4 col-s-6">
                       <a href="#" class="product">
                         <div
                           class="product__img"
@@ -873,7 +940,7 @@
                       </a>
                     </div>
                     <!-- product item-->
-                    <div class="grid__col-2-4">
+                    <div class="col col-l-2-4 col-m-4 col-s-6">
                       <a href="#" class="product">
                         <div
                           class="product__img"
@@ -925,7 +992,7 @@
                       </a>
                     </div>
                     <!-- product item-->
-                    <div class="grid__col-2-4">
+                    <div class="col col-l-2-4 col-m-4 col-s-6">
                       <a href="#" class="product">
                         <div
                           class="product__img"
@@ -977,7 +1044,7 @@
                       </a>
                     </div>
                     <!-- product item-->
-                    <div class="grid__col-2-4">
+                    <div class="col col-l-2-4 col-m-4 col-s-6">
                       <a href="#" class="product">
                         <div
                           class="product__img"
@@ -1029,7 +1096,7 @@
                       </a>
                     </div>
                     <!-- product item-->
-                    <div class="grid__col-2-4">
+                    <div class="col col-l-2-4 col-m-4 col-s-6">
                       <a href="#" class="product">
                         <div
                           class="product__img"
@@ -1081,7 +1148,7 @@
                       </a>
                     </div>
                     <!-- product item-->
-                    <div class="grid__col-2-4">
+                    <div class="col col-l-2-4 col-m-4 col-s-6">
                       <a href="#" class="product">
                         <div
                           class="product__img"
@@ -1133,7 +1200,7 @@
                       </a>
                     </div>
                     <!-- product item-->
-                    <div class="grid__col-2-4">
+                    <div class="col col-l-2-4 col-m-4 col-s-6">
                       <a href="#" class="product">
                         <div
                           class="product__img"
@@ -1186,13 +1253,119 @@
                     </div>
                   </div>
                 </div>
+
+                <!-- Pagination -->
+                <ul class="pagination home__pagination">
+                  <li class="pagination__item">
+                    <a href="" class="pagination__link">
+                      <i class="pagination__icon fa-solid fa-angle-left"></i>
+                    </a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="" class="pagination__link active">1</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="" class="pagination__link">2</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="" class="pagination__link">3</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="" class="pagination__link">4</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="" class="pagination__link">5</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="" class="pagination__link">...</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="" class="pagination__link">
+                      <i class="pagination__icon fa-solid fa-angle-right"></i>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
       <!-- Footer -->
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <div class="grid wide">
+          <div class="row footer__row">
+            <div class="col col-l-2-4 col-m-4 col-s-6 footer__col">
+              <h3 class="footer__heading">CHĂM SÓC KHÁCH HÀNG</h3>
+              <a href="#" class="footer__link">Trung Tâm Trợ Giúp</a>
+              <a href="#" class="footer__link">Trả Hàng & Hoàn Tiền</a>
+              <a href="#" class="footer__link">Chăm Sóc Khách Hàng</a>
+              <a href="#" class="footer__link">Trả Hàng & Hoàn Tiền</a>
+              <a href="#" class="footer__link">Chính Sách Bảo Hành</a>
+            </div>
+            <div class="col col-l-2-4 col-m-4 col-s-6 footer__col">
+              <h3 class="footer__heading">VỀ SHOPEE</h3>
+              <a href="#" class="footer__link">Giới Thiệu Về Shopee Việt Nam</a>
+              <a href="#" class="footer__link">Tuyển Dụng</a>
+              <a href="#" class="footer__link">Điều Khoản Shopee</a>
+              <a href="#" class="footer__link">Chính Sách Bảo Mật</a>
+            </div>
+            <div class="col col-l-2-4 col-m-4 col-s-6 footer__col">
+              <h3 class="footer__heading">DANH MỤC</h3>
+              <a href="#" class="footer__link">Giày Chạy Bộ</a>
+              <a href="#" class="footer__link">Giày Đá Bóng</a>
+              <a href="#" class="footer__link">Giày Bóng Rổ</a>
+              <a href="#" class="footer__link">Giày Nữ</a>
+            </div>
+            <div class="col col-l-2-4 col-m-4 col-s-6 footer__col">
+              <h3 class="footer__heading">THEO DÕI CHÚNG TÔI TRÊN</h3>
+              <a href="#" class="footer__link">
+                <i class="footer__icon fa-brands fa-facebook"></i>
+                Facebook
+              </a>
+              <a href="#" class="footer__link">
+                <i class="footer__icon fa-brands fa-instagram-square"></i>
+                Instagram
+              </a>
+              <a href="#" class="footer__link">
+                <i class="footer__icon fa-brands fa-linkedin"></i>
+                Linkedin
+              </a>
+            </div>
+            <div class="col col-l-2-4 col-m-4 col-s-6 footer__col">
+              <h3 class="footer__heading">TẢI ỨNG DỤNG SHOPEE NGAY THÔI</h3>
+              <div class="footer__app">
+                <img
+                  class="footer__qr"
+                  src="./dist/images/qr_code.png"
+                  alt="qr"
+                />
+
+                <div class="footer__app-list">
+                  <a href="#" class="footer__app-link">
+                    <img
+                      src="./dist/images/google_play.png"
+                      alt=""
+                      class="footer__app-link-img"
+                    />
+                  </a>
+                  <a href="#" class="footer__app-link">
+                    <img
+                      src="./dist/images/app_store.png"
+                      alt=""
+                      class="footer__app-link-img"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid">
+          <p class="footer__credit">
+            © 2015 - Bản quyền thuộc về Công ty TNHH Shopee
+          </p>
+        </div>
+      </footer>
       <!-- Modal -->
       <div id="modal" class="modal">
         <div class="modal__overlay"></div>
