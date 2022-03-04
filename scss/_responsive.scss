@@ -44,6 +44,10 @@
     transform: translateY(0);
   }
 
+  .menu-control-mobile {
+    display: block;
+  }
+
   .app__container {
     padding-top: ($header-height - $navbar-height) + $sortbar-mobile-height;
   }

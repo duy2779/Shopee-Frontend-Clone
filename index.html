@@ -215,15 +215,54 @@
               </li>
             </ul>
           </nav>
+          <!-- Menu mobile -->
+          <input
+            type="checkbox"
+            class="menu-checkbox-mobile"
+            id="menu-checkbox-mobile"
+            hidden
+          />
+          <div class="menu-mobile">
+            <label
+              for="menu-checkbox-mobile"
+              class="menu-mobile__overlay"
+            ></label>
+            <div class="menu-mobile__content">
+              <div class="menu-mobile__heading">
+                <img
+                  src="./dist/images/user-avatar.jpg"
+                  alt="user-img"
+                  class="menu-mobile__user-img"
+                />
+                <p class="menu-mobile__user-name">Đỗ Nam Trung</p>
+              </div>
+              <ul class="menu-mobile__list">
+                <li class="menu-mobile__item">
+                  <a href="#" class="menu-mobile__link">Tài khoản của tôi</a>
+                </li>
+                <li class="menu-mobile__item">
+                  <a href="#" class="menu-mobile__link">Đơn mua</a>
+                </li>
+                <li class="menu-mobile__item">
+                  <a href="#" class="menu-mobile__link">Đăng xuất</a>
+                </li>
+              </ul>
+            </div>
+          </div>
           <!-- Header with search -->
           <div class="header__with-search">
-            <!-- search icon for mobile -->
-            <label
-              for="search-checkbox-mobile"
-              class="header__search-icon-mobile hide-on-pc"
-            >
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </label>
+            <div class="menu-control-mobile">
+              <label for="menu-checkbox-mobile" class="menu-toggle-mobile">
+                <i class="fa-solid fa-bars"></i>
+              </label>
+              <!-- search icon for mobile -->
+              <label
+                for="search-checkbox-mobile"
+                class="header__search-icon-mobile hide-on-pc"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </label>
+            </div>
             <!-- Header Logo -->
             <div class="header__logo">
               <a href="/" class="header__logo-link">
@@ -1331,7 +1370,7 @@
                 Linkedin
               </a>
             </div>
-            <div class="col col-l-2-4 col-m-4 col-s-6 footer__col">
+            <div class="col col-l-2-4 col-m-4 col-s-12 footer__col">
               <h3 class="footer__heading">TẢI ỨNG DỤNG SHOPEE NGAY THÔI</h3>
               <div class="footer__app">
                 <img

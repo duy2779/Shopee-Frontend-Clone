@@ -8,6 +8,10 @@
 
   &__col {
     margin-top: 16px;
+
+    &:last-child .footer__app {
+      justify-content: center;
+    }
   }
 
   &__link {
